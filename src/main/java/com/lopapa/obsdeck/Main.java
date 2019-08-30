@@ -1,7 +1,6 @@
 package com.lopapa.obsdeck;
 
 import com.lopapa.obsdeck.jna.WindowListener;
-import com.lopapa.obsdeck.transition.NameStrategy;
 import com.lopapa.obsdeck.transition.SceneTransitionCommand;
 import com.lopapa.obsdeck.transition.TransitionFacade;
 import com.lopapa.obsdeck.utils.CSVUtil;

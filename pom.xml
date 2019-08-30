@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.maventest.App</mainClass>
+                            <mainClass>com.lopapa.obsdeck.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
