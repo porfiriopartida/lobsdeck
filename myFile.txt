@@ -1,0 +1,6 @@
+Key,Scene,Validation
+GIMP,Gimp,ENDS_WITH
+IntelliJ IDEA,IntelliJ IDEA,ENDS_WITH
+Unity,UnityScene,STARTS_WITH
+Visual Studio Code,VisualStudioScene,ENDS_WITH
+Photos,BackgroundImage,STARTS_WITH
