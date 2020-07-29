@@ -15,3 +15,6 @@ IntelliJ IDEA,IntelliJ IDEA,ENDS_WITH
 Notepad,NotepadScene,CONTAINS
 Blender,BlenderScene,STARTS_WITH
 ```
+
+I have to update this but instead of importing I'm adding https://github.com/Twasi/websocket-obs-java code to mine,
+this was not meant to be src controlled so... I'll fix it asap to be a dependency );
