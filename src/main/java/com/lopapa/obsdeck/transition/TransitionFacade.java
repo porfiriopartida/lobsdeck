@@ -22,7 +22,7 @@ public class TransitionFacade {
         }
     }
     public void save() throws IOException {
-        CSVUtil.toCsv(this.sceneTransitionCommands, "myFile.txt");
+        //CSVUtil.toCsv(this.sceneTransitionCommands, "myFile.txt");
     }
 
     private boolean validate(SceneTransitionCommand sceneTransitionCommand) {
@@ -52,6 +52,7 @@ public class TransitionFacade {
         if(key == null || key.length() == 0){
             return null;
         }
+        key = key.trim();
         for(SceneTransitionCommand command : sceneTransitionCommands){
             if(command == null){continue;}
             switch(command.getNameStrategy()){

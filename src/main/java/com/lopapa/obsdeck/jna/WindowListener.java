@@ -8,7 +8,7 @@ import java.util.Observable;
 
 public class WindowListener extends Observable implements Runnable {
     //TODO: Every once in a while verify that the current window is actually the right scene.
-    private int delay = 1000; //TODO: Implement delay acc, if you tab switch check every n ms for the next m seconds. Meaning that you may have switched and then back again.
+    private int delay = 200; //TODO: Implement delay acc, if you tab switch check every n ms for the next m seconds. Meaning that you may have switched and then back again.
     private String lastWindow = "";
     private WindowListener.User32 INSTANCE;
     public WindowListener(){
