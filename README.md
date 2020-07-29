@@ -25,3 +25,5 @@ If you switch to a window that you don't have in the files it shouldn't change t
 
 I have to update this but instead of importing I'm adding https://github.com/Twasi/websocket-obs-java code to mine,
 this was not meant to be src controlled so... I'll fix it asap to be a dependency );
+
+Use this code as is, just honor the Twasi library license, I don't mind what you use this for.
