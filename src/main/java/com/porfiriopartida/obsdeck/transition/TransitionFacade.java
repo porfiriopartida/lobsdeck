@@ -1,47 +1,47 @@
-package com.lopapa.obsdeck.transition;
+package com.porfiriopartida.obsdeck.transition;
 
-import com.lopapa.obsdeck.utils.CSVUtil;
+import com.porfiriopartida.screen.config.ScreenDetectionCommand;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TransitionFacade {
-    List<SceneTransitionCommand> sceneTransitionCommands;
+    List<ScreenDetectionCommand> screenDetectionCommands;
     public TransitionFacade(){
-        sceneTransitionCommands = new ArrayList<>();
+        screenDetectionCommands = new ArrayList<>();
     }
-    public void addTransitionCommand(SceneTransitionCommand sceneTransitionCommand){
-        if(validate(sceneTransitionCommand)){
-            this.sceneTransitionCommands.add(sceneTransitionCommand);
+    public void addTransitionCommand(ScreenDetectionCommand screenDetectionCommand){
+        if(validate(screenDetectionCommand)){
+            this.screenDetectionCommands.add(screenDetectionCommand);
         }
     }
-    public void addTransitionCommands(List<SceneTransitionCommand> sceneTransitionCommands){
-        for(SceneTransitionCommand sceneTransitionCommand : sceneTransitionCommands){
-            addTransitionCommand(sceneTransitionCommand);
+    public void addTransitionCommands(List<ScreenDetectionCommand> screenDetectionCommands){
+        for(ScreenDetectionCommand screenDetectionCommand : screenDetectionCommands){
+            addTransitionCommand(screenDetectionCommand);
         }
     }
     public void save() throws IOException {
         //CSVUtil.toCsv(this.sceneTransitionCommands, "myFile.txt");
     }
 
-    private boolean validate(SceneTransitionCommand sceneTransitionCommand) {
-        if(sceneTransitionCommand == null){
+    private boolean validate(ScreenDetectionCommand screenDetectionCommand) {
+        if(screenDetectionCommand == null){
             return false;
         }
-        if(sceneTransitionCommand.getScene() == null){
+        if(screenDetectionCommand.getCommand() == null){
             return false;
         }
-        if(sceneTransitionCommand.getNameStrategy() == null){
+        if(screenDetectionCommand.getNameStrategy() == null){
             return false;
         }
-        if(sceneTransitionCommand.getKey() == null){
+        if(screenDetectionCommand.getKey() == null){
             return false;
         }
-        if(sceneTransitionCommand.getScene().length() == 0){
+        if(screenDetectionCommand.getCommand().length() == 0){
             return false;
         }
-        if(sceneTransitionCommand.getKey().length() == 0){
+        if(screenDetectionCommand.getKey().length() == 0){
             return false;
         }
         return true;
@@ -53,32 +53,32 @@ public class TransitionFacade {
             return null;
         }
         key = key.trim();
-        for(SceneTransitionCommand command : sceneTransitionCommands){
+        for(ScreenDetectionCommand command : screenDetectionCommands){
             if(command == null){continue;}
             switch(command.getNameStrategy()){
                 case CONTAINS:
                     if(key.contains(command.getKey())){
-                        return command.getScene();
+                        return command.getCommand();
                     }
                     break;
                 case ENDS_WITH:
                     if(key.endsWith(command.getKey())){
-                        return command.getScene();
+                        return command.getCommand();
                     }
                     break;
                 case STARTS_WITH:
                     if(key.startsWith(command.getKey())){
-                        return command.getScene();
+                        return command.getCommand();
                     }
                     break;
                 case EQUALS:
                     if(key.equals(command.getKey())){
-                        return command.getScene();
+                        return command.getCommand();
                     }
                     break;
                 case EQUALS_IGNORE_CASE:
                     if(key.equalsIgnoreCase(command.getKey())){
-                        return command.getScene();
+                        return command.getCommand();
                     }
                     break;
             }

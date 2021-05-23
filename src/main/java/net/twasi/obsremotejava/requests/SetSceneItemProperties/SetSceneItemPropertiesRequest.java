@@ -1,7 +1,7 @@
 package net.twasi.obsremotejava.requests.SetSceneItemProperties;
 
 import com.google.gson.annotations.SerializedName;
-import com.lopapa.obsdeck.utils.ObsUtils;
+import com.porfiriopartida.obsdeck.utils.ObsUtils;
 import net.twasi.obsremotejava.OBSCommunicator;
 import net.twasi.obsremotejava.requests.BaseRequest;
 import net.twasi.obsremotejava.requests.RequestType;

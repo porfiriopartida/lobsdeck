@@ -1,6 +1,6 @@
 Usage:
 
-Main class: com.lopapa.obsdeck.ObsDockLauncher
+Main class: com.porfiriopartida.obsdeck.ObsDockLauncher
 Parameters: --file PathToYourConfigFile
 
 Example:

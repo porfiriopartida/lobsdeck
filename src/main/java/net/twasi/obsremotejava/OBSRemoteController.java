@@ -1,6 +1,6 @@
 package net.twasi.obsremotejava;
 
-import com.lopapa.obsdeck.utils.ObsUtils;
+import com.porfiriopartida.obsdeck.utils.ObsUtils;
 import net.twasi.obsremotejava.requests.ResponseBase;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;

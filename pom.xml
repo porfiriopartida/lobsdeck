@@ -4,12 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lopapa</groupId>
+    <groupId>com.porfiriopartida</groupId>
     <artifactId>obs-deck</artifactId>
     <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -24,18 +23,29 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>build-obs-scene-swapper</id>
                         <goals>
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
                             <classifier>spring-boot</classifier>
-                            <mainClass>com.lopapa.obsdeck.ObsDockLauncher</mainClass>
-<!--                            <layout>ZIP</layout>-->
+                            <mainClass>com.porfiriopartida.app.ObsDockLauncherApp</mainClass>
+                            <finalName>obs-scene-swapper-${version}</finalName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-time-tracker-app</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>spring-boot</classifier>
+                            <mainClass>com.porfiriopartida.app.TimeTrackerLauncherApp</mainClass>
+                            <finalName>time-tracker-${version}</finalName>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
 
     </build>

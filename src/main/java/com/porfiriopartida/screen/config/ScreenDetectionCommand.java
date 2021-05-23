@@ -1,14 +1,14 @@
-package com.lopapa.obsdeck.transition;
+package com.porfiriopartida.screen.config;
 
 import java.io.Serializable;
 
-public class SceneTransitionCommand implements Serializable {
+public class ScreenDetectionCommand implements Serializable {
     private NameStrategy nameStrategy;
     private String key;
-    private String scene;
+    private String command;
 
     public String toString(){
-        return key +","+scene+","+nameStrategy.toString();
+        return key + "," + nameStrategy.toString() + "," + command;
     }
 
     public NameStrategy getNameStrategy() {
@@ -27,11 +27,11 @@ public class SceneTransitionCommand implements Serializable {
         this.key = key;
     }
 
-    public String getScene() {
-        return scene;
+    public String getCommand() {
+        return command;
     }
 
-    public void setScene(String scene) {
-        this.scene = scene;
+    public void setCommand(String command) {
+        this.command = command;
     }
 }

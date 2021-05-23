@@ -1,13 +1,8 @@
-package com.lopapa.obsdeck.jna;
+package com.porfiriopartida.screen.jna;
 
-import com.lopapa.obsdeck.utils.HelloWorldDemo;
-import com.sun.java.swing.plaf.windows.WindowsGraphicsUtils;
 import com.sun.jna.Native;
-import com.sun.jna.Platform;
 import com.sun.jna.PointerType;
-import com.sun.jna.platform.DesktopWindow;
 import com.sun.jna.platform.win32.WinDef;
-import com.sun.jna.win32.StdCallLibrary;
 import com.sun.jna.win32.StdCallLibrary;
 
 

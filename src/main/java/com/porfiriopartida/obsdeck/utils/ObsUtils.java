@@ -1,4 +1,4 @@
-package com.lopapa.obsdeck.utils;
+package com.porfiriopartida.obsdeck.utils;
 
 public class ObsUtils {
     public static void status(String s, String... params ) {

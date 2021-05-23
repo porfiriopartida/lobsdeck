@@ -1,4 +1,4 @@
-package com.lopapa.obsdeck.transition;
+package com.porfiriopartida.screen.config;
 
 public enum NameStrategy {
     STARTS_WITH,

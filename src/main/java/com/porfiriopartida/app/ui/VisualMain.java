@@ -1,7 +1,6 @@
-package com.lopapa.obsdeck;
+package com.porfiriopartida.app.ui;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class VisualMain {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {

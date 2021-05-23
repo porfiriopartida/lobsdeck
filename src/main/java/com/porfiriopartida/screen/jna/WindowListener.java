@@ -1,4 +1,4 @@
-package com.lopapa.obsdeck.jna;
+package com.porfiriopartida.screen.jna;
 import com.sun.jna.Native;
 import com.sun.jna.PointerType;
 import com.sun.jna.platform.win32.WinDef;
